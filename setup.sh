@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-COMMIT_HASH="6d09d72df0ba5f8817a29d6edc265b911d2db0f2"
+COMMIT_HASH="d2ec83dcecebc91049755da6717e926563809e55"
 
 rm -rf generated
 mkdir generated
@@ -16,6 +16,7 @@ cat >generated/deltatouch-git.json <<EOL
 EOL
 
 rm -rf deltatouch-shallow
-git clone --depth 1 --recurse-submodules --shallow-submodules https://codeberg.org/lk108/deltatouch deltatouch-shallow
+git clone --depth 1 --no-checkout https://codeberg.org/lk108/deltatouch deltatouch-shallow
+(cd deltatouch-shallow && git fetch --depth 1 origin "${COMMIT_HASH}" && git checkout "${COMMIT_HASH}" && git submodule update --init --recursive --depth 1)
 
 uvx --from flatpak_cargo_generator flatpak-cargo-generator deltatouch-shallow/libs/chatmail-core/Cargo.lock -o generated/sources-rust.json
