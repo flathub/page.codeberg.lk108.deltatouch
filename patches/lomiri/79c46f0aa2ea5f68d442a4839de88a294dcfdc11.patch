@@ -1,0 +1,31 @@
+From 79c46f0aa2ea5f68d442a4839de88a294dcfdc11 Mon Sep 17 00:00:00 2001
+From: d2weber <5274036-d2weber@users.noreply.gitlab.com>
+Date: Mon, 8 Dec 2025 16:04:29 +0100
+Subject: [PATCH] Fix scaling for animated images
+
+The scaling image provider does not work for animated images. This
+prohibits the use of the AnimatedImage QML element with lomiri. So we
+exempt file formats that are common for animated images (gif, webp) from
+using it.
+---
+ src/LomiriToolkit/ucqquickimageextension.cpp | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/LomiriToolkit/ucqquickimageextension.cpp b/src/LomiriToolkit/ucqquickimageextension.cpp
+index 5f4df7680d..070685c2c3 100644
+--- a/src/LomiriToolkit/ucqquickimageextension.cpp
++++ b/src/LomiriToolkit/ucqquickimageextension.cpp
+@@ -160,7 +160,9 @@ void UCQQuickImageExtension::reloadSource()
+     if (scaleFactor == QStringLiteral("1")) {
+         if (qFuzzyCompare(qGuiApp->devicePixelRatio(), (qreal)1.0)
+             || selectedFilePath.endsWith(QStringLiteral(".svg"))
+-            || selectedFilePath.endsWith(QStringLiteral(".svgz"))) {
++            || selectedFilePath.endsWith(QStringLiteral(".svgz"))
++            || selectedFilePath.endsWith(QStringLiteral(".gif"))
++            || selectedFilePath.endsWith(QStringLiteral(".webp"))) {
+             // Take care to pass the original fragment
+             QUrl selectedFileUrl(QUrl::fromLocalFile(selectedFilePath));
+             if (m_source.hasFragment()) {
+-- 
+GitLab
+
