@@ -60,6 +60,8 @@ modules:
       - type: git
         url: https://gitlab.com/ubports/development/core/lomiri-ui-toolkit.git
         commit: 083ae10f7a73c4aa1d3d754977443b0c491d7842
+      - type: patch
+        path: patches/lomiri/113.patch
       - type: shell
         commands:
           # Hardcode the pathes in the *.pri files so qmake finds the so files for linking
