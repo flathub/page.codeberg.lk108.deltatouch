@@ -17,6 +17,7 @@ finish-args:
   - --socket=pulseaudio  # Record and play voice messages
   - --share=network
   - --talk-name=org.freedesktop.Notifications
+  - --talk-name=sm.puri.OSK0
   - --env=QTWEBENGINE_DICTIONARIES_PATH=/app/qtwebengine_dictionaries
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
