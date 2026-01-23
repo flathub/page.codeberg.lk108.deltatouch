@@ -133,3 +133,11 @@ modules:
     sources:
       - generated/deltatouch-git.json
     buildsystem: cmake-ninja
+
+  - name: custom-fontconfig
+    buildsystem: simple
+    build-commands:
+     - install -Dm0644 fonts.conf ${FLATPAK_DEST}/etc/fonts/local.conf
+    sources:
+      - type: file
+        path: fonts.conf
