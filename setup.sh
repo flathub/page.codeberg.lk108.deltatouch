@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-COMMIT_HASH="d54231f184544ffaa8ace4b58031490d44decc56"
+COMMIT_HASH="1e7705978f7cd0c912f910a6a5e1a33a7a7c7197"
 
 rm -rf generated
 mkdir generated
