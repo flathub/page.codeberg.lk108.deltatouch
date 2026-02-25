@@ -18,6 +18,7 @@ finish-args:
   - --share=network
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=sm.puri.OSK0
+  - --env=FONTCONFIG_FILE=/app/etc/fonts/fonts.conf
   - --env=QTWEBENGINE_DICTIONARIES_PATH=/app/qtwebengine_dictionaries
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
@@ -133,3 +134,11 @@ modules:
     sources:
       - generated/deltatouch-git.json
     buildsystem: cmake-ninja
+
+  - name: fontconfig
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 fonts.conf ${FLATPAK_DEST}/etc/fonts/fonts.conf
+    sources:
+      - type: file
+        path: fonts.conf
