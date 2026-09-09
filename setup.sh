@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-COMMIT_HASH="ac45eb90ede50818df00583b9111fbe26991e460"
+COMMIT_HASH="6c243e00bde864807241f672f063b7bba4555b71" # d2weber/rpc
 
 rm -rf generated
 mkdir generated

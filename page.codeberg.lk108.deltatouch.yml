@@ -98,6 +98,8 @@ modules:
     subdir: libs/chatmail-core
     build-options:
       append-path: /usr/lib/sdk/rust-stable/bin
+      config-opts:
+        - -DWITH_JSONRPC_BINDINGS=ON
       env:
         # It does not work to dereference the variable here :-/
         # CARGO_HOME: $FLATPAK_BUILDER_BUILDDIR/cargo
