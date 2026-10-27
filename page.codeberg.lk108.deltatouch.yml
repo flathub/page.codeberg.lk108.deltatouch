@@ -97,6 +97,9 @@ modules:
     buildsystem: cmake  # Using Make generator to see output of the cargo build
     subdir: libs/chatmail-core
     build-options:
+      config-opts: [
+        "-DWITH_JSONRPC_BINDINGS=1"
+      ]
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         # It does not work to dereference the variable here :-/
