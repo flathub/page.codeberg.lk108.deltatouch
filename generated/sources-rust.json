@@ -2186,6 +2186,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/encodify/encodify-1.0.2.crate",
+        "sha256": "e95d6e27686e1d6991a3077f4dbec9d33d18903466d234165ad86cd08c3ebc79",
+        "dest": "cargo/vendor/encodify-1.0.2"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"e95d6e27686e1d6991a3077f4dbec9d33d18903466d234165ad86cd08c3ebc79\", \"files\": {}}",
+        "dest": "cargo/vendor/encodify-1.0.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/encoding_rs/encoding_rs-0.8.35.crate",
         "sha256": "75030f3c4f45dafd7586dd6780965a8c7e8e285a5ecb86713e63a79c5b2766f3",
         "dest": "cargo/vendor/encoding_rs-0.8.35"
@@ -3837,14 +3850,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/libc/libc-0.2.191.crate",
-        "sha256": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
-        "dest": "cargo/vendor/libc-0.2.191"
+        "url": "https://static.crates.io/crates/libc/libc-0.2.189.crate",
+        "sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+        "dest": "cargo/vendor/libc-0.2.189"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a\", \"files\": {}}",
-        "dest": "cargo/vendor/libc-0.2.191",
+        "contents": "{\"package\": \"3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2\", \"files\": {}}",
+        "dest": "cargo/vendor/libc-0.2.189",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4045,14 +4058,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mail-builder/mail-builder-1.0.0.crate",
-        "sha256": "ccbc27cb02a58a311a404769a22f5abf63fe3173b290d80be7c534f9c7023151",
-        "dest": "cargo/vendor/mail-builder-1.0.0"
+        "url": "https://static.crates.io/crates/mail-builder/mail-builder-2.0.0.crate",
+        "sha256": "a8bca634885db8e836b80700a73661de20ffd93cb5787729afc31575545e2aed",
+        "dest": "cargo/vendor/mail-builder-2.0.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"ccbc27cb02a58a311a404769a22f5abf63fe3173b290d80be7c534f9c7023151\", \"files\": {}}",
-        "dest": "cargo/vendor/mail-builder-1.0.0",
+        "contents": "{\"package\": \"a8bca634885db8e836b80700a73661de20ffd93cb5787729afc31575545e2aed\", \"files\": {}}",
+        "dest": "cargo/vendor/mail-builder-2.0.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
